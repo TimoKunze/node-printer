@@ -43,7 +43,7 @@
   "devDependencies": {
     "node-gyp": "^11.2.0",
     "prebuild": "^13.0.1",
-    "node-abi": "^4.9.0",
+    "node-abi": "^4.12.0",
     "patch-package": "^8.0.0"
   },
   "dependencies": {
