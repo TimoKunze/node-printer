@@ -29,4 +29,4 @@ jobs:
       - name: Prebuild
         run: |
           npm run apply-patches
-          npm run prebuild -- --strip --all --arch ${{ matrix.arch }} -u ${{ secrets.PREBUILD_TOKEN }}
+          npm run prebuild -- --strip --target ${{ matrix.node }} --arch ${{ matrix.arch }} -u ${{ secrets.PREBUILD_TOKEN }}
