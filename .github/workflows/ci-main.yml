@@ -13,7 +13,7 @@ jobs:
       matrix:
         os: [windows-latest, macos-latest, ubuntu-latest]
         arch: [x64]
-        node: [18.x, 20.x]
+        node: [18.x, 20.x, 22.x]
     timeout-minutes: 30
     steps:
       - if: ${{ matrix.os == 'ubuntu-latest' }}
@@ -29,4 +29,4 @@ jobs:
       - name: Prebuild
         run: |
           npm run apply-patches
-          npm run prebuild -- --strip --target ${{ matrix.node }} --arch ${{ matrix.arch }} -u ${{ secrets.PREBUILD_TOKEN }}
+          npm run prebuild -- --strip --target >=18.0.0 --arch ${{ matrix.arch }} -u ${{ secrets.PREBUILD_TOKEN }}
