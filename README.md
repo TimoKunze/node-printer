@@ -6,8 +6,7 @@ Native bind printers on POSIX and Windows OS from Node.js, electron and node-web
 
 * no dependecies;
 * native method wrappers from Windows  and POSIX (which uses [CUPS 1.4/macOS 14](http://cups.org/)) APIs;
-* compatible with node v0.8.x, 0.9.x and v0.11.x (with 0.11.9 and 0.11.13);
-* compatible with node-webkit v0.8.x and 0.9.2;
+* compatible with node v18, v20, v22;
 * `getPrinters()` to enumerate all installed printers with current jobs and statuses;
 * `getPrinter(printerName)` to get a specific/default printer info with current jobs and statuses;
 * `getPrinterDriverOptions(printerName)` ([POSIX](http://en.wikipedia.org/wiki/POSIX) only) to get a specific/default printer driver options such as supported paper size and other info
