@@ -1,4 +1,6 @@
 name: CI for Main Branch
+permissions:
+  contents: read
 
 on:
   push:
