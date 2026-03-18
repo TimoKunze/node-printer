@@ -47,7 +47,7 @@
     "patch-package": "^8.0.1"
   },
   "dependencies": {
-    "nan": "^2.25.0",
+    "nan": "^2.26.1",
     "prebuild-install": "^7.1.3"
   }
 }
