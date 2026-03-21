@@ -15,12 +15,8 @@ jobs:
       matrix:
         os: [windows-latest, macos-latest, ubuntu-latest]
         arch: [x64]
-        node: [20.x, 21.x, 22.x, 23.x, 24.x, 25.x]
+        node: [20.x, 22.x, 23.x, 24.x, 25.x]
         exclude:
-          - os: macos-latest
-            node: 21.x
-          - os: ubuntu-latest
-            node: 21.x
           - os: windows-latest
             node: 23.x
     timeout-minutes: 30
