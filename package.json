@@ -42,12 +42,12 @@
   "types": "types/index.d.ts",
   "devDependencies": {
     "node-gyp": "^12.2.0",
-    "prebuild": "^13.0.1",
+    "prebuild": "git+https://github.com/orgads/prebuild.git",
     "node-abi": "^4.28.0",
     "patch-package": "^8.0.1"
   },
   "dependencies": {
-    "nan": "^2.26.1",
+    "nan": "^2.26.2",
     "prebuild-install": "^7.1.3"
   }
 }
