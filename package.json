@@ -1,7 +1,7 @@
 {
   "name": "@timokunze/node-printer",
   "description": "Node.js printer bindings",
-  "version": "0.6.27",
+  "version": "0.6.28",
   "homepage": "https://github.com/TimoKunze/node-printer",
   "author": {
     "name": "Ion Lupascu",
@@ -18,7 +18,7 @@
     "url": "git://github.com/TimoKunze/node-printer.git"
   },
   "engines": {
-    "node": ">= 18.0.0"
+    "node": ">= 20.0.0"
   },
   "scripts": {
     "install": "node-gyp rebuild || prebuild-install",
