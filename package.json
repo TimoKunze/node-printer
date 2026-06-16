@@ -41,7 +41,7 @@
   "main": "./lib/printer",
   "types": "types/index.d.ts",
   "devDependencies": {
-    "node-gyp": "^12.4.0",
+    "node-gyp": "^13.0.0",
     "prebuild": "git+https://github.com/TimoKunze/prebuild.git",
     "node-abi": "^4.31.0",
     "patch-package": "^8.0.1"
