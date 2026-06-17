@@ -13,7 +13,7 @@ jobs:
       matrix:
         os: [windows-latest, macos-latest, ubuntu-latest]
         arch: [x64]
-        node: [20.x, 22.x, 23.x, 24.x, 25.x, 26.x]
+        node: [22.x, 23.x, 24.x, 25.x, 26.x]
         exclude:
           - os: windows-latest
             node: 23.x
@@ -28,7 +28,10 @@ jobs:
         with:
           node-version: ${{ matrix.node }}
       - uses: actions/checkout@v5
-      - run: npm i
+      # --ignore-scripts skips the package's own install-time `node-gyp rebuild`,
+      # which would otherwise compile against unpatched nan before apply-patches
+      # runs and fail on V8 >= 14.8. The prebuild step below compiles fresh.
+      - run: npm i --ignore-scripts
       - name: Prebuild
         run: |
           npm run apply-patches
