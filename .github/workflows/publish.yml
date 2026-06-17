@@ -1,6 +1,7 @@
 name: Publish Package to npmjs
 permissions:
   contents: read
+  id-token: write
 
 on:
   release:
@@ -10,12 +11,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v5
       - uses: actions/setup-node@v5
         with:
           node-version: 24.x
           registry-url: 'https://registry.npmjs.org'
-      - uses: actions/checkout@v5
       - run: npm ci --ignore-scripts
       - run: npm publish --access public
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
