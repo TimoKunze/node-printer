@@ -1,7 +1,7 @@
 {
   "name": "@timokunze/node-printer",
   "description": "Node.js printer bindings",
-  "version": "0.6.33",
+  "version": "0.6.34",
   "homepage": "https://github.com/TimoKunze/node-printer",
   "author": {
     "name": "Ion Lupascu",
@@ -47,7 +47,7 @@
     "patch-package": "^8.0.1"
   },
   "dependencies": {
-    "nan": "^2.27.0",
+    "nan": "^2.28.0",
     "prebuild-install": "^7.1.3"
   }
 }
