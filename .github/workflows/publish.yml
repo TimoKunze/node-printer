@@ -16,5 +16,11 @@ jobs:
         with:
           node-version: 24.x
           registry-url: 'https://registry.npmjs.org'
+      # Older npm 11 releases (bundled with some Node versions) wrongly treat the
+      # root git devDependency "prebuild" as non-root under allow-git=root and
+      # fail with EALLOWGIT. npm 11.21+ and npm 12 handle it correctly.
+      - name: Upgrade npm 11
+        shell: bash
+        run: case "$(npm -v)" in 11.*) npm install -g npm@latest-11 ;; esac
       - run: npm ci --ignore-scripts
       - run: npm publish --access public
